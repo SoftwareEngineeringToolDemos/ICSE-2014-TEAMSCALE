@@ -7,8 +7,8 @@ This repository contains information related to the tool Teamscale presented in 
 
 This repository *is not* the original repository for this tool. Here are some links to the original project:
 
- - Official Distribution Channel [link] (https://www.cqse.eu/en/products/teamscale/landing/)
- - Visual Studio Plugin [link] (https://marketplace.eclipse.org/content/teamscale-eclipse-plugin)
+ - [Official Distribution Channel](https://www.cqse.eu/en/products/teamscale/landing/)
+ - [Visual Studio Plugin](https://marketplace.eclipse.org/content/teamscale-eclipse-plugin)
  
 In this repository, for Teamscale you will find:
 
