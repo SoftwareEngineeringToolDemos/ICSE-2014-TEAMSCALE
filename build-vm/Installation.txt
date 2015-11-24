@@ -1,0 +1,57 @@
+Step 1:
+
+Install the Eclipse IDE 3.7 or higher.
+
+Step 2:
+
+Install Java 1.7 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher. Other Java implementations or JREs are not supported.
+
+Step 3:
+
+(a)Install the Plugin using the Eclipse Marketplace: https://marketplace.eclipse.org/content/teamscale-eclipse-plugin.
+
+(b)Restart Eclipse.
+
+(c)In order to make sure that Teamscale is properly installed, one should be able to see a Teamscale menu entry in 
+the main menu bar in Eclipse.
+
+Step 4: Create Teamscale server
+
+(a)Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.5.1.zip 
+
+(b)To use Teamscale server we need a valid license file ("teamscale.license"). I have attached the license.txt. 
+One can also get an evaluation license on Teamscale website.
+
+(c)To install Teamscale th following steps are followed:
+	(i)Unzip Teamscale from the Zip file to a directory.
+	(ii)Place the license file into the directory where the zip file was extracted. It must be named teamscale.license.
+
+(d)Run Teamscale Server
+	(i)Windows: run the file "teamscale.bat" by double clicking it
+	(ii)Linux: run the file "teamscale.sh" by executing ./teamscale.sh
+
+(e)Teamscale can be opened on the browser by browsing to http://localhost:8080.
+
+(f)On the login page enter the default admin credentials:
+	(i)User: admin
+	(ii)Password: admin
+Step 5:
+
+(a)Open the Eclipse Window -> Preferences menu and select Teamscale from the list.
+
+(b)Use the "Add" button to add a new Teamscale server 
+
+(c)Fill the dialog with the appropriate values. 
+	(i)Name : anyname
+	(ii)URL:http://localhost:8080
+	(iii)Username:admin
+	(iv)IDE Access Key (Follow the below instructions)
+
+The IDE Requires you to use your IDE Access Key for authentication. 
+You can find it under your user profile (located in the top right menu) 
+in http://localhost:8080/dashboard.html after running the server and then clicking IDE Access Key.
+
+
+
+
+
