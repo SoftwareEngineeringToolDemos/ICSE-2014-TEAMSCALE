@@ -3,7 +3,8 @@ Instructions to Run Teamscale Demo on this VM
 ==================================================
 
 Assumptions: 
-(i) Teamscale has been downloaded and the teamscale.license has been also put in the same folder where teamscale zip folder is extracted.
+(i) Teamscale has been downloaded and the teamscale.license has been also put 
+in the same folder where teamscale zip folder is extracted.
 (ii) Teamscale server is running and localhost:8080 is open on the browser. 
 (iii) Java 1.8 and Eclipse Luna are installed.
 (iv) The sample project "spring-petclinic" has been cloned from git and is opened on Eclipse
