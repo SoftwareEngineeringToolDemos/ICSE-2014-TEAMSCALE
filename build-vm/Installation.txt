@@ -1,24 +1,24 @@
 Step 1:
 
-Install the Eclipse IDE 3.7 or higher.
+Install Java 1.8 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher. Other Java implementations or JREs are not supported.
 
 Step 2:
 
-Install Java 1.7 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher. Other Java implementations or JREs are not supported.
+Install the Eclipse IDE 4.4(Luna) or higher.
 
 Step 3:
 
-(a)Install the Plugin using the Eclipse Marketplace: https://marketplace.eclipse.org/content/teamscale-eclipse-plugin.
-
-(b)Restart Eclipse.
-
-(c)In order to make sure that Teamscale is properly installed, one should be able to see a Teamscale menu entry in 
+(a) Open Eclipse
+(b) Go to Help-> Eclipse MarketPlace
+(c) Find https://marketplace.eclipse.org/content/teamscale-eclipse-plugin.
+(d) Click Install, confirm and accept the terms of the licence agreement. Click Finish.
+(e) Restart Eclipse.
+(f) In order to make sure that Teamscale is properly installed, one should be able to see a Teamscale menu entry in 
 the main menu bar in Eclipse.
 
 Step 4: Create Teamscale server
 
-(a)Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.5.1.zip 
-
+(a)Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip 
 (b)To use Teamscale server we need a valid license file ("teamscale.license"). I have attached the license.txt. 
 One can also get an evaluation license on Teamscale website.
 
