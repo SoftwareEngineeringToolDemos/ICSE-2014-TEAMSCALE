@@ -1,3 +1,7 @@
+
+=========================================================================
+Instructions to Install Teamscale and run a sample project on Teamscale 
+=========================================================================
 Step 1:
 
 Install Java 1.8 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher.
@@ -36,7 +40,7 @@ Step 7: Create Teamscale server
 One can also get an evaluation license by
   (i) Going to https://www.cqse.eu/en/products/teamscale/try/
   (ii) Clicking on "Send me the free license"
-(c) Place the license file into the directory where the teamscale zip file was extracted. It must be named teamscale.license
+(c) Place the license file into the directory where the teamscale.sh is located. It must be named teamscale.license
 (d) Run Teamscale Server
 	(i)Windows: run the file "teamscale.bat" by double clicking it
 	(ii)Linux: run the file "teamscale.sh" by executing ./teamscale.sh in the terminal
