@@ -75,3 +75,8 @@ Step 9:
 (e) Right click on the petclinic project -> Properties and select Teamscale on the left hand side
 (f) Check "Enable Teamscale for this project"
 (g) The server name and the project name will match the teamscale server configuration.
+
+Step 10:
+(a) Installation is complete.
+(b) View Teamscale "findings" by hovering on red bars on the left side of the code in eclipse or going to
+localhost:8080 and clicking on "Findings"
