@@ -1,6 +1,7 @@
 Step 1:
 
-Install Java 1.8 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher. Other Java implementations or JREs are not supported.
+Install Java 1.8 or higher(JRE and JDK). Teamscale requires Oracle Java JDK 1.8 or higher.
+Other Java implementations or JREs are not supported.
 
 Step 2:
 
