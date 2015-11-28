@@ -1,29 +1,94 @@
 # -*- mode: ruby -*-
-# vi: set ft=ruby :
+  # vi: set ft=ruby :
 
-# All Vagrant configuration is done below. The "2" in Vagrant.configure
-# configures the configuration version (we support older styles for
-# backwards compatibility). Please don't change it unless you know what
-# you're doing.
+  #__author__ = "Pragyan Jena"
+  #__copyright__ = "NA"
+  #__license__ = "NA"
+  #__version__ = "NA"
 
-
-Vagrant.configure(2) do |config|
-  config.vm.box = "box-cutter/ubuntu1404-desktop"
-  
+  # All Vagrant configuration is done below. The "2" in Vagrant.configure
+  # configures the configuration version (we support older styles for
+  # backwards compatibility). Please don't change it unless you know what
+  # you're doing.
+Vagrant.require_plugin "vagrant-reload" 
+  Vagrant.configure(2) do |config|
+  config.vm.box = "hashicorp/precise32"
   config.vm.hostname = "teamscale"
 
-  config.vm.provider "virtualbox" do |vb|
-    # Display the VirtualBox GUI when booting the machine
-    # vb.gui = true
-    # Customize the amount of memory on the VM:
-    vb.memory = "1024"
-	vb.name = "teamscale"
-  end
-
+   #Display settings
+   config.vm.provider "virtualbox" do |vb|
+   #Display the VirtualBox GUI when booting the machine
+   vb.gui = true
+  
+   # Customize the amount of memory on the VM:
+   vb.memory = "1024"
+   vb.name = "teamscale"
+   vb.customize ['modifyvm', :id, '--nictype1', 'Am79C973']
+   end
+	
+  #Provisions to be added to the VM
+  
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh
-	sudo wget -O /opt/eclipse-java-luna-SR2-linux-gtk-x86_64.tar.gz http://ftp.fau.de/eclipse/technology/epp/downloads/release/luna/SR2/eclipse-java-luna-SR2-linux-gtk-x86_64.tar.gz
-    cd /opt/ && sudo tar -zxvf eclipse-java-luna-SR2-linux-gtk-x86_64.tar.gz
+	sudo apt-get autoclean
+	sudo apt-get clean
+	sudo apt-get update -y
+	sudo apt-get install ubuntu-desktop -y
+	sudo apt-get install lightdm -y
+	echo "autologin-user=vagrant" | sudo tee --append /etc/lightdm/lightdm.conf
   SHELL
+ 
+  config.vm.provision :reload
+  
+  config.vm.provision "shell", inline: <<-SHELL 
+	#ubuntu install and java and eclipse install
+	sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+	sudo add-apt-repository ppa:webupd8team/java -y
+	sudo apt-get update -y
+	sudo apt-get install oracle-java8-installer -y
+	sudo wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh
+	sudo wget -O /opt/eclipse-java-luna-SR2-linux-gtk.tar.gz http://ftp.fau.de/eclipse/technology/epp/downloads/release/luna/SR2/eclipse-java-luna-SR2-linux-gtk.tar.gz
+	cd /opt/ && sudo tar -xvf eclipse-java-luna-SR2-linux-gtk.tar.gz
+
+	#teamscale installation
+	sudo wget -O /home/vagrant/Desktop/teamscale-v1.6.0.zip https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip
+	unzip /home/vagrant/Desktop/teamscale-v1.6.0.zip -d /home/vagrant/Desktop/teamscale-v1.6.0
+	sudo wget -O /home/vagrant/Desktop/teamscale-v1.6.0/teamscale/teamscale.license https://raw.githubusercontent.com/SoftwareEngineeringToolDemos/ICSE-2014-Teamscale/master/build-vm/teamscale.license
+	sudo ./Desktop/teamscale-v1.6.0/teamscale/teamscale.sh &
+	#x-www-browser http://localhost:8080
+	#cd /opt/eclipse
+	#sudo ./eclipse
+	
+	sudo apt-get install git -y
+	mkdir workspace
+	cd workspace && git clone https://github.com/spring-projects/spring-petclinic.git
+	
+	sudo wget -O /home/vagrant/Desktop/Installation.txt https://raw.githubusercontent.com/SoftwareEngineeringToolDemos/ICSE-2014-Teamscale/master/build-vm/Installation.txt
+	sudo wget -O /home/vagrant/Desktop/README.txt https://raw.githubusercontent.com/SoftwareEngineeringToolDemos/ICSE-2014-Teamscale/master/build-vm/README.txt
+	sudo wget -O /home/vagrant/Desktop/license.txt https://raw.githubusercontent.com/SoftwareEngineeringToolDemos/ICSE-2014-Teamscale/master/build-vm/license.txt
+	
+	cd /home/vagrant/Desktop
+	
+	{ 
+			echo '[Desktop Entry]'
+			echo 'Name=Eclipse'
+			echo 'Type=Application'
+			echo 'Exec=/opt/eclipse/eclipse -data /home/vagrant/workspace'
+			echo 'Terminal=false'
+			echo 'Icon=/opt/eclipse/icon.xpm'
+			echo 'Comment=Integrated Development Environment'
+			echo 'NoDisplay=false'
+			echo 'Categories=Development;IDE;'
+			echo 'Name[en]=Eclipse'
+		} > eclipse.desktop
+		chmod 755 eclipse.desktop
+	{
+	echo '[Desktop Entry]'
+	echo 'Name=Link to Teamscale video Demo'
+	echo 'Type=Link'
+	echo 'URL=https://www.youtube.com/watch?v=AZ4SS99plNY'
+	echo 'Icon=text-html'
+	} > youtube.desktop
+	
+  SHELL
+	
 end
