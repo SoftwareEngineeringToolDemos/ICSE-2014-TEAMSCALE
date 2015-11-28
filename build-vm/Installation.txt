@@ -54,23 +54,24 @@ One can also get an evaluation license by
      (i)   Provide the path of the sample spring-petclinic project in the "Input Directory"
      (ii)  Give any name for the "Repository Identifier"
      (iii) Click on "Create Project"
-Step 5:
+     
+Step 8:
+
+(a) The IDE Requires you to use your IDE Access Key for authentication. 
+(b) Go to your user profile (located in the top right menu) in http://localhost:8080/dashboard.html
+(c) Click on "IDE Access Key" -> "Generate a New Access Key"
+(d) This is used in step 9
+
+Step 9:
 
 (a)Open the Eclipse Window -> Preferences menu and select Teamscale from the list.
-
 (b)Use the "Add" button to add a new Teamscale server 
-
 (c)Fill the dialog with the appropriate values. 
 	(i)Name : anyname
 	(ii)URL:http://localhost:8080
 	(iii)Username:admin
-	(iv)IDE Access Key (Follow the below instructions)
-
-The IDE Requires you to use your IDE Access Key for authentication. 
-You can find it under your user profile (located in the top right menu) 
-in http://localhost:8080/dashboard.html after running the server and then clicking IDE Access Key.
-
-
-
-
-
+	(iv)IDE Access Key : Use the key from Step 8.
+(d) Click "Validate" and then "OK" once everything is successful.
+(e) Right click on the petclinic project -> Properties and select Teamscale on the left hand side
+(f) Check "Enable Teamscale for this project"
+(g) The server name and the project name will match the teamscale server configuration.
