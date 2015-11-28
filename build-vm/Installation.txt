@@ -16,7 +16,18 @@ Step 3:
 (f) In order to make sure that Teamscale is properly installed, one should be able to see a Teamscale menu entry in 
 the main menu bar in Eclipse.
 
-Step 4: Create Teamscale server
+Step 4: Install Git
+
+Step 5: Clone the sample project in amy directory by using 
+Git clone https://github.com/spring-projects/spring-petclinic.git
+
+Step 6: 
+(a) Open Eclipse 
+(b) Go to File -> Import -> Maven -> Existing Maven Projects -> Next
+(c) Browse for the root directory where you had cloned the petclinic project.
+(d) Select spring-petclinic and click ok and then finish.
+
+Step 7: Create Teamscale server
 
 (a) Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip 
 (b) Unzip the contents.
@@ -40,6 +51,9 @@ One can also get an evaluation license by
 (l) Assuming we are working on a java project, select JAVA (Default) from the analysis profile option.
 (k) No need to change "Template for initial Dashboard"
 (l) Click on Add Source Code Repository
+     (i)   Provide the path of the sample spring-petclinic project in the "Input Directory"
+     (ii)  Give any name for the "Repository Identifier"
+     (iii) Click on "Create Project"
 Step 5:
 
 (a)Open the Eclipse Window -> Preferences menu and select Teamscale from the list.
