@@ -11,30 +11,35 @@ Step 3:
 (a) Open Eclipse
 (b) Go to Help-> Eclipse MarketPlace
 (c) Find https://marketplace.eclipse.org/content/teamscale-eclipse-plugin.
-(d) Click Install, confirm and accept the terms of the licence agreement. Click Finish.
+(d) Click Install, confirm and accept the terms of the license agreement. Click Finish.
 (e) Restart Eclipse.
 (f) In order to make sure that Teamscale is properly installed, one should be able to see a Teamscale menu entry in 
 the main menu bar in Eclipse.
 
 Step 4: Create Teamscale server
 
-(a)Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip 
-(b)To use Teamscale server we need a valid license file ("teamscale.license"). I have attached the license.txt. 
-One can also get an evaluation license on Teamscale website.
-
-(c)To install Teamscale th following steps are followed:
-	(i)Unzip Teamscale from the Zip file to a directory.
-	(ii)Place the license file into the directory where the zip file was extracted. It must be named teamscale.license.
-
-(d)Run Teamscale Server
+(a) Download Teamscale from https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip 
+(b) Unzip the contents.
+(b) To use Teamscale server we need a valid license file ("teamscale.license"). I have attached the teamscale.license. 
+One can also get an evaluation license by
+  (i) Going to https://www.cqse.eu/en/products/teamscale/try/
+  (ii) Clicking on "Send me the free license"
+(c) Place the license file into the directory where the teamscale zip file was extracted. It must be named teamscale.license
+(d) Run Teamscale Server
 	(i)Windows: run the file "teamscale.bat" by double clicking it
-	(ii)Linux: run the file "teamscale.sh" by executing ./teamscale.sh
-
-(e)Teamscale can be opened on the browser by browsing to http://localhost:8080.
-
-(f)On the login page enter the default admin credentials:
+	(ii)Linux: run the file "teamscale.sh" by executing ./teamscale.sh in the terminal
+(e) Wait till the server is started (typically 45 - 60 seconds).
+(f) Teamscale can be opened on the browser by opening http://localhost:8080.
+(g) On the login page enter the default admin credentials:
 	(i)User: admin
 	(ii)Password: admin
+(h) Once logged in, click on More menu.
+(i) Select Projects from the more menu.
+(j) Create a new project.
+(k) Give any project name eg; "Demo"
+(l) Assuming we are working on a java project, select JAVA (Default) from the analysis profile option.
+(k) No need to change "Template for initial Dashboard"
+(l) Click on Add Source Code Repository
 Step 5:
 
 (a)Open the Eclipse Window -> Preferences menu and select Teamscale from the list.
