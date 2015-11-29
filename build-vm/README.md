@@ -21,14 +21,14 @@
     ```  
 3. Vagrant will start the VM and provision it. Please be patient as the VM will reload after provisioning completes.    
 
-After VM is provisioned and it reloads :-  
-    a. You will see Eclipse, a gnome-terminal and Firefox on startup.  
-    b. On the terminal execute the command: 
-        ```  
-        $ sudo ./teamscale.sh  
-        ```  
-    c. On Firefox, refresh the tab :- `http://localhost:8080` (can take a few minutes to load).  
-    d. Refer to the Readme.txt file on VM's Desktop for steps to run the tool.    
+##### After VM is provisioned and it reloads :  
+1. You will see Eclipse, a gnome-terminal and Firefox on startup.  
+2. On the terminal execute the command: 
+    ```  
+    $ sudo ./teamscale.sh  
+    ```  
+3. On Firefox, refresh the tab :- `http://localhost:8080` (can take a few minutes to load).  
+4. Refer to the Readme.txt file on VM's Desktop for steps to run the tool.    
 
 #### Note :   
  -  The vagrant reload plugin must be installed prior to running the "vagrant up" command.
