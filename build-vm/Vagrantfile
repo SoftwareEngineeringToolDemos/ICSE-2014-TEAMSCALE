@@ -25,7 +25,7 @@
 	sudo apt-get update -y
 	
 	# Remove unwanted icons from Launcher
-    cd /usr/share/applications && sudo rm -f libreoffice-writer.desktop libreoffice-calc.desktop libreoffice-impress.desktop ubuntu-software-center.desktop ubuntu-amazon-default.desktop
+        cd /usr/share/applications && sudo rm -f libreoffice-writer.desktop libreoffice-calc.desktop libreoffice-impress.desktop ubuntu-software-center.desktop ubuntu-amazon-default.desktop
 
 	#java, maven and eclipse install
 	sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
@@ -34,7 +34,7 @@
 	sudo wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_java8.sh && bash equip_java8.sh
 	sudo apt-get install maven -y
 	sudo wget -O /opt/eclipse-java-luna-SR2-linux-gtk.tar.gz http://ftp.fau.de/eclipse/technology/epp/downloads/release/luna/SR2/eclipse-java-luna-SR2-linux-gtk.tar.gz
-    cd /opt/ && sudo tar -zxvf eclipse-*.tar.gz
+        cd /opt/ && sudo tar -zxvf eclipse-*.tar.gz
 
 	#teamscale installation
 	sudo wget -O /home/vagrant/teamscale-v1.6.0.zip https://www.cqse.eu/download/teamscale/teamscale-v1.6.0.zip
@@ -44,20 +44,20 @@
 	#extract VM files to desktop
 	sudo chmod 777 /vagrant/*
 	sudo cp /vagrant/*.jar /opt/eclipse/plugins/
-    unzip /vagrant/Teamscale_VM_Desktop_Files.zip -d /home/vagrant/Desktop/
-    chmod +x /home/vagrant/Desktop/*.desktop
+        unzip /vagrant/Teamscale_VM_Desktop_Files.zip -d /home/vagrant/Desktop/
+        chmod +x /home/vagrant/Desktop/*.desktop
 
 	# Import spring-petclinic Project to Eclipse
-    mkdir /home/vagrant/workspace/
+        mkdir /home/vagrant/workspace/
 	sudo apt-get install git -y
 	cd /home/vagrant/ && git clone https://github.com/spring-projects/spring-petclinic.git
 	cd /home/vagrant/spring-petclinic/ && mvn eclipse:eclipse
 	
 	# Add Eclipse to startup applications before reloading VM
 	sudo chfn -f "vagrant" vagrant
-    mkdir -p /home/vagrant/.config/autostart/
-    cp /home/vagrant/Desktop/Eclipse.desktop /home/vagrant/.config/autostart/
-	#mv /home/vagrant/Desktop/teamscale*.desktop /home/vagrant/.config/autostart/
+        mkdir -p /home/vagrant/.config/autostart/
+        cp /home/vagrant/Desktop/Eclipse.desktop /home/vagrant/.config/autostart/
+	mv /home/vagrant/Desktop/teamscale*.desktop /home/vagrant/.config/autostart/
 
   SHELL
   
