@@ -19,11 +19,12 @@
     ```  
     $ vagrant up --provider virtualbox  
     ```  
-3. Vagrant will start the VM and provision it. Please be patient as the VM will reload after provisioning completes.    
+3. Vagrant will start the VM and provision it. 
+4. Please be patient as the VM will reload after provisioning completes.    
 
 ##### After VM is provisioned and it reloads :  
 1. You will see Eclipse, a gnome-terminal and Firefox on startup.  
-2. On the terminal execute the command: 
+2. On the terminal, execute the command:  
     ```  
     $ sudo ./teamscale.sh  
     ```  
