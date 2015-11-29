@@ -28,7 +28,7 @@
     ```  
     $ sudo ./teamscale.sh  
     ```  
-3. On Firefox, refresh the tab :- `http://localhost:8080` (can take a few minutes to load).  
+3. On Firefox, refresh the tab :- `http://localhost:8080` (refresh a few times, can take a few minutes to load).  
 4. Refer to the Readme.txt file on VM's Desktop for steps to run the tool.    
 
 #### Note :   
