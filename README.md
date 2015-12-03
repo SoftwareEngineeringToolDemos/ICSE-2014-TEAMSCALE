@@ -18,4 +18,4 @@ In this repository, for Teamscale you will find:
  - :x: Executable tool (not available)
  - :x: Virtual machine containing tool (not available)
 
-This repository was constructed by [Pragyan Paramita Jena] (https://github.com/ppjena) under the supervision of [Dr. Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to Mr. Benjamin Hummel for providing us necessary help to get the tool running.
+This repository was constructed by [Pragyan Paramita Jena] (https://github.com/ppjena) under the supervision of [Dr. Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to Mr. Benjamin Hummel for providing us the necessary help to get the tool working.
