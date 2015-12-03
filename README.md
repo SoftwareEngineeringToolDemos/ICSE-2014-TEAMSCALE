@@ -3,7 +3,7 @@ Teamscale is a code analysis tool that supports your team to analyze, monitor, a
 
 ***
 
-This repository contains information related to the tool Teamscale presented in the International Conference on Software Engineering, 2014. The tool was originally presented in this [paper] (http://dl.acm.org/citation.cfm?id=2591068).
+This repository contains information related to the tool Teamscale presented in  the 36th International Conference on Software Engineering, 2014. The tool was originally presented in this [paper] (http://dl.acm.org/citation.cfm?id=2591068).
 
 This repository *is not* the original repository for this tool. Here are some links to the original project:
 
