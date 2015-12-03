@@ -9,6 +9,7 @@ This repository *is not* the original repository for this tool. Here are some li
 
   - [Official Distribution Channel] (https://www.cqse.eu/en/products/teamscale/landing/)
   - [Eclipse Plugin]  (https://marketplace.eclipse.org/content/teamscale-eclipse-plugin)
+  - Brief [video] (https://www.youtube.com/watch?v=mYKCCGleSC4) of tool. More videos available [here] (https://www.cqse.eu/en/products/teamscale/features/).
   - Publication :Lars Heinemann, Benjamin Hummel, Daniela Steidl, CQSE GmbH, Garching b. München, Germany, "Teamscale: Software Quality Control in Real-Time" [PDF](https://www.cqse.eu/publications/2014-teamscale-software-quality-control-in-real-time.pdf)
  
 In this repository, for Teamscale you will find:
