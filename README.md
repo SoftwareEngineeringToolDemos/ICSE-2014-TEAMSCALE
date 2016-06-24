@@ -13,9 +13,8 @@ This repository *is not* the original repository for this tool. Here are some li
   - Publication :Lars Heinemann, Benjamin Hummel, Daniela Steidl, CQSE GmbH, Garching b. München, Germany, "Teamscale: Software Quality Control in Real-Time" [PDF](https://www.cqse.eu/publications/2014-teamscale-software-quality-control-in-real-time.pdf)
  
 In this repository, for Teamscale you will find:
-
- - :x: Source code (not available, the tool is proprietary)
- - :x: Executable tool (not available)
- - :x: Virtual machine containing tool (not available)
-
+* :x: Source code (not available)
+* :x: Executable tool (not available)
+* :x: Virtual machine containing tool (not available)
+* 
 This repository was constructed by [Pragyan Paramita Jena] (https://github.com/ppjena) under the supervision of [Dr. Emerson Murphy-Hill] (https://github.com/CaptainEmerson). Thanks to Mr. Benjamin Hummel for providing us the necessary help to get the tool working.
